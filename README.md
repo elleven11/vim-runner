@@ -1,23 +1,23 @@
-# Runner - modified to work with Go
+# Runner - modified fork to work with Go and other langs
 
 ![gif](https://imgur.com/bSnBCD6.gif)
 
 ## 1. Installation
 
 ### 1.a. Installation with [Vim-Plug](https://github.com/junegunn/vim-plug)
-1. Add `Plug 'aben20807/vim-runner'` to your vimrc file.
+1. Add `Plug 'elleven11/vim-runner'` to your vimrc file.
 2. Reload your vimrc or restart.
 3. Run `:PlugInstall`
 
 ### 1.b. Installation with [Vundle](https://github.com/VundleVim/Vundle.vim)
-1. Add `Plugin 'aben20807/vim-runner'` to your vimrc file.
+1. Add `Plugin 'elleven11/vim-runner'` to your vimrc file.
 2. Reload your vimrc or restart
 3. Run `:PluginInstall`
 
 ## 2. Usage
 
 ### 2.a. Supported Languages
-+ C, C++, Python, Rust, Markdown, Lisp.
++ C, C++, GO, Python, Rust, Markdown, Lisp.
 
 ### 2.b. Settings
 
@@ -29,10 +29,10 @@ let g:runner_use_default_mapping = 1
 let g:runner_is_save_first = 1
 
 " Print a timestamp on the top of output by default.
-let g:runner_print_timestamp = 1
+let g:runner_print_timestamp = 0
 
 " Print time usage of do all actions by default.
-let g:runner_print_time_usage = 1
+let g:runner_print_time_usage =0
 
 " Show the comment information by default.
 let g:runner_show_info = 1
@@ -56,6 +56,7 @@ let g:runner_is_with_md = 0
 " Section: executable settings
 let g:runner_c_executable = "gcc"
 let g:runner_cpp_executable = "g++"
+let g:runner_go_executable = "go run"
 let g:runner_rust_executable = "cargo"
 let g:runner_python_executable = "python3"
 

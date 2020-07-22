@@ -23,6 +23,7 @@ call runner#InitVariable("g:runner_print_timestamp", 0)
 call runner#InitVariable("g:runner_print_time_usage", 0)
 call runner#InitVariable("g:runner_show_info", 1)
 call runner#InitVariable("g:runner_auto_remove_tmp", 0)
+call runner#InitVariable("g:runner_shell_location", "/bin/bash")
 call runner#InitVariable("g:runner_run_key", "<F5>")
 call runner#InitVariable("g:runner_tmp_dir", "/tmp/vim-runner/")
 
@@ -58,7 +59,7 @@ augroup comment
 augroup END
 
 
-" Section: key map設定
+" Section: key map
 function! s:SetUpKeyMap()
     execute "nnoremap <silent> ".g:runner_run_key." :<C-u>call runner#DoAll()<CR>"
 endfunction
