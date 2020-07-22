@@ -19,8 +19,8 @@ set shellcmdflag=-c
 " Section: variable initialization
 call runner#InitVariable("g:runner_use_default_mapping", 1)
 call runner#InitVariable("g:runner_is_save_first", 1)
-call runner#InitVariable("g:runner_print_timestamp", 1)
-call runner#InitVariable("g:runner_print_time_usage", 1)
+call runner#InitVariable("g:runner_print_timestamp", 0)
+call runner#InitVariable("g:runner_print_time_usage", 0)
 call runner#InitVariable("g:runner_show_info", 1)
 call runner#InitVariable("g:runner_auto_remove_tmp", 0)
 call runner#InitVariable("g:runner_run_key", "<F5>")
@@ -38,6 +38,7 @@ call runner#InitVariable("g:runner_cpp_executable", "g++")
 call runner#InitVariable("g:runner_rust_executable", "cargo")
 call runner#InitVariable("g:runner_python_executable", "python3")
 call runner#InitVariable("g:runner_lisp_executable", "sbcl --script")
+call runner#InitVariable("g:runner_go_executable", "go run")
 
 " Section: compile options settings
 call runner#InitVariable("g:runner_c_compile_options", "-std=c11 -Wall")

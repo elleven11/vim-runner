@@ -55,7 +55,7 @@ function! runner#SetUpFiletype(filetype) abort
         let b:supported = 1
         return
     endif
-    if b:ft ==# 'c' || b:ft ==# 'cpp' || b:ft ==# 'python' || b:ft == 'lisp'
+    if b:ft ==# 'c' || b:ft ==# 'cpp' || b:ft ==# 'cpp' || b:ft ==# 'python' || b:ft == 'lisp'
         let b:supported = 1
         return
     endif
@@ -99,7 +99,7 @@ function! runner#DoAll() abort
         call runner#Run()
         call runner#After()
     else
-        call runner#ShowInfo("   ❖  不支援  ❖ ")
+        call runner#ShowInfo("Cannot run the file")
     endif
 endfunction
 
@@ -219,6 +219,11 @@ function! runner#Run() abort
         execute "!" .
                     \ l:time . " "
                     \ g:runner_python_executable .
+                    \ " %"
+    elseif b:ft ==# 'go'
+        execute "!" .
+                    \ l:time . " "
+                    \ g:runner_go_executable .
                     \ " %"
     elseif b:ft ==# 'lisp'
         execute "!" .

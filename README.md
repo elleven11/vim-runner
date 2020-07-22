@@ -1,4 +1,4 @@
-# Runner
+# Runner - modified to work with Go
 
 ![gif](https://imgur.com/bSnBCD6.gif)
 
