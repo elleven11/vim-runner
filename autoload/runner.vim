@@ -51,11 +51,7 @@ function! runner#SetUpFiletype(filetype) abort
         let b:supported = 1
         return
     endif
-    if b:ft ==# 'markdown' && g:runner_is_with_md
-        let b:supported = 1
-        return
-    endif
-    if b:ft ==# 'c' || b:ft ==# 'cpp' || b:ft ==# 'cpp' || b:ft ==# 'python' || b:ft == 'lisp'
+    if b:ft ==# 'c' || b:ft ==# 'go' || b:ft ==# 'cpp' || b:ft ==# 'python' || b:ft == 'lisp'
         let b:supported = 1
         return
     endif
