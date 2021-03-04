@@ -55,7 +55,7 @@ function! runner#SetUpFiletype(filetype) abort
         let b:supported = 1
         return
     endif
-    if b:ft ==# 'c' || b:ft ==# 'go' || b:ft ==# 'cpp' || b:ft ==# 'python' || b:ft == 'lisp'
+    if b:ft ==# 'c' || b:ft ==# 'go' || b:ft ==# 'java' || b:ft ==# 'cpp' || b:ft ==# 'python' || b:ft == 'lisp'
         let b:supported = 1
         return
     endif
@@ -224,6 +224,11 @@ function! runner#Run() abort
         execute "!" .
                     \ l:time . " "
                     \ g:runner_go_executable .
+                    \ " %"
+    elseif b:ft ==# 'java'
+        execute "!" .
+                    \ l:time . " "
+                    \ g:runner_java_executable .
                     \ " %"
     elseif b:ft ==# 'lisp'
         execute "!" .

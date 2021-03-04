@@ -40,6 +40,7 @@ call runner#InitVariable("g:runner_rust_executable", "cargo")
 call runner#InitVariable("g:runner_python_executable", "python3")
 call runner#InitVariable("g:runner_lisp_executable", "sbcl --script")
 call runner#InitVariable("g:runner_go_executable", "go run")
+call runner#InitVariable("g:runner_java_executable", "java")
 
 " Section: compile options settings
 call runner#InitVariable("g:runner_c_compile_options", "-std=c11 -Wall")
